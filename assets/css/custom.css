@@ -2075,12 +2075,12 @@ nav #navbar .container.menu_container .col-sm-12 .box_newsletter .form_neswslett
 	        padding-left: 20px;
 	        padding-right: 20px;
 	        top: 50%;
-	        height: 90%; 
-		} 
+	        height: 90%;
+		}
     }
 
     @media (min-width: 1024px) {
-		.modal_overlay .box_modal { width: 780px; } 
+		.modal_overlay .box_modal { width: 780px; }
     }
 
     @media (max-width: 1023px) {
@@ -2244,22 +2244,15 @@ nav #navbar .container.menu_container .col-sm-12 .box_newsletter .form_neswslett
 
 /*agregado por nico*/
 
-
-section.top .navbar-header .logo a {
-    display: inline-block;
-    background: url(../img/logo-arauco-quilicura.svg) no-repeat;
-}
-
 @media (max-width: 991px){
    section.top #menu_mobile .logo a,
    section.top #nav_mobile .navbar-header .logo a {
-    background: url(../img/logos_mall/arauco_quilicura.svg) no-repeat;
+    background: url(../img/logos_mall/arauco_san_antonio.svg) no-repeat;
   }
 }
 
-
 .modal_overlay .box_modal .header_modal .logo {
-    background: url(../img/logos_mall/arauco_quilicura.svg) no-repeat;
+    background: url(../img/logos_mall/arauco_san_antonio.svg) no-repeat;
     background-position: center;
     background-size: cover;
     width: 116px;
@@ -2271,4 +2264,10 @@ section.top .navbar-header .logo a {
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     top: 100px;
+}
+
+/* adaptacion theme ASA*/
+section.top .navbar-header .logo a {
+    display: inline-block;
+    background: url(../img/logo_arauco_san_antonio.svg) no-repeat;
 }

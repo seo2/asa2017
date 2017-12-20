@@ -56,8 +56,8 @@ if(ICL_LANGUAGE_CODE=='en'){
                               <a href="<?php bloginfo('url'); ?>/tiendas#tiendas">
 	                            <?php if($e==1){ ?>
                                    <div class="caption tiendas">
-                                      <p>NUESTRAS </p>
-                                       <h3>TIENDAS </h3>
+                                      <p>NUESTRAS</p>
+                                       <h3>TIENDAS</h3>
                                        <div class="divider"> </div>
                                    </div>
                                 <?php } ?>
@@ -83,7 +83,7 @@ if(ICL_LANGUAGE_CODE=='en'){
                                <a href="<?php bloginfo('url'); ?>/food-court-tiendas/#patio-de-comida">
 	                            <?php if($e==1){ ?>
                                    <div class="caption foodcourt">
-                                      <p>NUESTRA VARIEDAD </p>
+                                      <p>NUESTRA VARIEDAD en </p>
                                        <h3>Patio de Comidas </h3>
                                        <div class="divider"> </div>
                                    </div>
@@ -99,34 +99,34 @@ if(ICL_LANGUAGE_CODE=='en'){
                       <!-- NOVEDADES -->
                       <div class="box_horizontal">
                          <div class="box_slider owl-carousel owl-theme">
-                <?php
-                  $e = 0;
-                $sliders = get_order_group('slider_medio_imagen_desktop');
-                foreach($sliders as $slider){
-                  $e++;
-              ?>
-                           <div class="item">
-                              <div class="img_slide hidden-xs hidden-sm"  style="background: url(<?php echo get('slider_medio_imagen_desktop',$slider); ?>);"> </div>
-                              <!-- 700 x 400px -->
-                              <div class="img_slide visible-xs visible-sm"  style="background: url(<?php echo get('slider_medio_imagen_mobile',$slider); ?>);"> </div>
-                  <div class="caption">
-                    <?php if(get('slider_medio_texto_1',$slider)){ ?>
-                                  <h3><?php echo get('slider_medio_texto_1',$slider); ?></h3>
-                                  <?php } ?>
-                    <?php if(get('slider_medio_texto_2',$slider)){ ?>
-                                  <h4 class="divider"><?php echo get('slider_medio_texto_2',$slider); ?></h4>
-                                  <?php } ?>
-                    <?php if(get('slider_medio_texto_3',$slider)){ ?>
-                                  <p><?php echo get('slider_medio_texto_3',$slider); ?></p>
-                                  <?php } ?>
-                    <?php if(get('slider_medio_link',$slider)){ ?>
-                    <div class="text-center">
-                                    <a href="<?php echo get('slider_medio_link',$slider); ?>" class="btn btn-default btn_blanco"  role="button"><?php echo $btn2; ?></a>
-                                  </div>
-                                  <?php } ?>
-                              </div>
-                           </div><!-- item -->
-                          <?php } ?>
+							<?php
+								$e = 0;
+								$sliders = get_order_group('slider_medio_imagen_desktop');
+								foreach($sliders as $slider){
+								$e++;
+							?>
+		                        <div class="item">
+		                            <div class="img_slide hidden-xs hidden-sm"  style="background: url(<?php echo get('slider_medio_imagen_desktop',$slider); ?>);"> </div>
+		                              <!-- 700 x 400px -->
+		                            <div class="img_slide visible-xs visible-sm"  style="background: url(<?php echo get('slider_medio_imagen_mobile',$slider); ?>);"> </div>
+										<div class="caption">
+										<?php if(get('slider_medio_texto_1',$slider)){ ?>
+										    <h3><?php echo get('slider_medio_texto_1', $slider); ?></h3>
+										<?php } ?>
+										<?php if(get('slider_medio_texto_2', $slider)){ ?>
+										    <h4 class="divider"><?php echo get('slider_medio_texto_2', $slider); ?></h4>
+										<?php } ?>
+										<?php if(get('slider_medio_texto_3', $slider)){ ?>
+										    <p><?php echo get('slider_medio_texto_3', $slider); ?></p>
+										<?php } ?>
+										<?php if(get('slider_medio_link', $slider)){ ?>
+										<div class="text-center">
+		                                    <a href="<?php echo get('slider_medio_link', $slider); ?>" class="btn btn-default btn_blanco"  role="button"><?php echo $btn2; ?></a>
+		                                  </div>
+		                                  <?php } ?>
+		                              </div>
+		                           </div><!-- item -->
+		                          <?php } ?>
                         </div>
                       </div><!-- box horizontal -->
                 </div>
@@ -144,8 +144,8 @@ if(ICL_LANGUAGE_CODE=='en'){
                                   <a href="<?php bloginfo('url'); ?>/novedades-galeria/#galerias">
 	                            <?php if($e==1){ ?>
                                    <div class="caption galeria">
-                                      <p>NUESTRA</p>
-                                       <h3>Galeria </h3>
+                                      	<p>NUESTRAs</p>
+                                       	<h3>Galerías </h3>
                                        <div class="divider"> </div>
                                    </div>
                                 <?php } ?>
@@ -508,7 +508,7 @@ if(ICL_LANGUAGE_CODE=='en'){
                     </div>
                    <div class="checkbox center-block">
                    		<label>
-                       		<input type="checkbox" id="acepto2"> Estoy de acuerdo con los <a href="http://araucopremiumoutletbuenaventura.cl/wp-content/uploads/2017/03/terminos_y_condiciones_newsletter_buenaventura.pdf" target="_blank">términos y condiciones</a>
+                       		<input type="checkbox" id="acepto2"> Estoy de acuerdo con los <a href="" target="_blank">términos y condiciones</a>
 						</label>
                    </div>
 				   <button type="submit" class="btn btn-default btn_rojo center-block">Enviar</button>

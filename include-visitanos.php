@@ -1,18 +1,18 @@
-<?php 
+<?php
 // TRADUCCIONES
 if(ICL_LANGUAGE_CODE=='en'){
 	$tit1 = "Visit us";
-}elseif(ICL_LANGUAGE_CODE=='pt-br'){ 
+}elseif(ICL_LANGUAGE_CODE=='pt-br'){
 	$tit1 = "Visítanos";
-}else{ 
+}else{
 	$tit1 = "visítanos";
-} ?> 
+} ?>
   <div class="container">
       <section class="visitanos">
         <h2><?php echo $tit1; ?></h2>
-		<?php 	 
-			if ($detect->isMobile()) { 
-		?>				
+		<?php
+			if ($detect->isMobile()) {
+		?>
         <div class="logos_pak_xs visible-xs visible-sm visible-md">
             <div class="slider_logos_mall owl-carousel owl-theme">
 	           <div class="item">
@@ -50,8 +50,8 @@ if(ICL_LANGUAGE_CODE=='en'){
                         <img src="<?php bloginfo('template_url'); ?>/assets/img/logos_mall/arauco_premium_outlet.svg" alt="" class="center-block">
                     </a>
                 </div>
-            </div> 
-        </div> <!-- slider logos pak xs -->		
+            </div>
+        </div> <!-- slider logos pak xs -->
 		<?php
 			}else{
 		?>
@@ -59,9 +59,8 @@ if(ICL_LANGUAGE_CODE=='en'){
           <ul>
 		  	<li>
             	<a class="hvr-float" href="http://www.parquearauco.cl/" target="_blank">
-                <img src="<?php bloginfo('template_url'); ?>/assets/img/logos_mall/parque_arauco_xs.svg" class="logo_size"> 
-
-                	<img src="<?php bloginfo('template_url'); ?>/assets/img/logo_xs.svg" class="logo_size">
+                	<img src="<?php bloginfo('template_url'); ?>/assets/img/logos_mall/parque_arauco_xs.svg" class="logo_size">
+                	<!-- <img src="<?php bloginfo('template_url'); ?>/assets/img/logo_xs.svg" class="logo_size"> -->
               	</a>
             </li>
             <li>
@@ -96,8 +95,8 @@ if(ICL_LANGUAGE_CODE=='en'){
             </li>
           </ul>
         </div>
-		<?php		
+		<?php
 			}
-		?>       
+		?>
       </section><!-- logos pak -->
    </div> <!--  / container visitanos -->
