@@ -3,10 +3,10 @@
   <div class="row">
     <div class="col-xs-6">
         <div class="box_servicio" id="serv1xsbox">
-          <a href="javascript:void(0);" class="borde_verde"  data-toggle="collapse" data-target="#serv1xs">
-              <img src="<?php bloginfo('template_url'); ?>/assets/img/casa_cambio.svg"  class="center-block">
+          <a href="javascript:void(0);" class="borde_azul"  data-toggle="collapse" data-target="#serv1xs">
+              <img src="<?php bloginfo('template_url'); ?>/assets/img/afex.svg"  class="center-block">
              <!--  <p><?php echo $serv1; ?></p> -->
-             <p>casas de cambio</p>
+             <p>Casas de cambio</p>
           </a>
         </div>
         <div class="box_more_info">
@@ -16,10 +16,9 @@
 
     <div class="col-xs-6">
         <div class="box_servicio" id="serv2xsbox">
-          <a href="javascript:void(0);" class="borde_azul" data-toggle="collapse" data-target="#serv2xs">
-              <img src="<?php bloginfo('template_url'); ?>/assets/img/taxis.svg"  class="center-block">
-             <!--  <p><?php echo $serv2; ?></p>-->
-              <p>supermercado</p>
+          <a href="javascript:void(0);" class="borde_amarillo" data-toggle="collapse" data-target="#serv2xs">
+              <img src="<?php bloginfo('template_url'); ?>/assets/img/supermercado.svg"  class="center-block">
+              <p>Supermercado</p>
           </a>
         </div>
         <div class="box_more_info">
@@ -29,10 +28,9 @@
 
     <div class="col-xs-6">
         <div class="box_servicio" id="serv3xsbox">
-          <a href="javascript:void(0);" class="borde_azul" data-toggle="collapse" data-target="#serv3xs">
-              <img src="<?php bloginfo('template_url'); ?>/assets/img/taxis.svg"  class="center-block">
-             <!--  <p><?php echo $serv3; ?></p>-->
-              <p>supermercado</p>
+          <a href="javascript:void(0);" class="borde_rojo data-toggle="collapse" data-target="#serv3xs">
+              <img src="<?php bloginfo('template_url'); ?>/assets/img/servipag.svg"  class="center-block">
+              <p>Servicios de pago</p>
           </a>
         </div>
         <div class="box_more_info">
@@ -42,10 +40,9 @@
 
     <div class="col-xs-6">
         <div class="box_servicio" id="serv4xsbox">
-          <a href="javascript:void(0);" class="borde_azul" data-toggle="collapse" data-target="#serv4xs">
-              <img src="<?php bloginfo('template_url'); ?>/assets/img/taxis.svg"  class="center-block">
-             <!--  <p><?php echo $serv4; ?></p>-->
-              <p>supermercado</p>
+          <a href="javascript:void(0);" class="borde_verde" data-toggle="collapse" data-target="#serv4xs">
+              <img src="<?php bloginfo('template_url'); ?>/assets/img/hotel.svg"  class="center-block">
+              <p>Hotel Casino del Pacífico</p>
           </a>
         </div>
         <div class="box_more_info">
@@ -70,7 +67,7 @@
       <div id="serv1xs" class="content_servicio collapse">
           <div id="serv1xsancla" class="anclita"></div>
           <div class="container">
-              <h4 class="divider verde"><?php the_title(); ?></h4>
+              <h4 class="divider azul"><?php the_title(); ?></h4>
           <div class="close_servicio" data-target="#serv1xs"></div>
           <div class="row">
                   <div class="col-md-6 col-md-push-6">
@@ -90,7 +87,7 @@
 		<?php
 		    $args = array(
 				'post_type' => array('servicios_generales'),
-				'p' 		=> 2223
+				'p' 		=> 2298
 		    );
 			$the_query = new WP_Query ($args);
 		    $i = 0;
@@ -100,7 +97,7 @@
 		<div id="serv2xs" class="content_servicio collapse">
 	        <div id="serv2xsancla" class="anclita"></div>
 	        <div class="container">
-	        	<h4 class="divider azul"><?php the_title(); ?></h4>
+	        	<h4 class="divider amarillo"><?php the_title(); ?></h4>
 	            <div class="close_servicio" data-target="#serv2xs"> </div>
 	            <div class="row">
 	            	<div class="col-md-6 col-md-push-6">
@@ -117,6 +114,69 @@
 		<?php endwhile; else: ?>
 		<?php endif; ?>
 		<?php wp_reset_postdata(); ?>
+
+			<?php
+			    $args = array(
+					'post_type' => array('servicios_generales'),
+					'p' 		=> 2299
+			    );
+				$the_query = new WP_Query ($args);
+			    $i = 0;
+			    if ( have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post();
+			    	$i++;
+			?>
+			<div id="serv3xs" class="content_servicio collapse">
+		        <div id="serv3xsancla" class="anclita"></div>
+		        <div class="container">
+		        	<h4 class="divider rojo"><?php the_title(); ?></h4>
+		            <div class="close_servicio" data-target="#serv3xs"> </div>
+		            <div class="row">
+		            	<div class="col-md-6 col-md-push-6">
+		                	<div class="img_servicio"  style="background: url(<?php echo get_the_post_thumbnail_url(); ?>);"></div>
+		                </div>
+		                <div class="col-md-6 col-md-pull-6 ">
+		                	<div class="desc_servicio">
+		                    	<?php the_content(); ?>
+		                    </div>
+		                </div>
+		            </div>
+		        </div>
+		    </div><!-- content lavado de autos -->
+			<?php endwhile; else: ?>
+			<?php endif; ?>
+			<?php wp_reset_postdata(); ?>
+
+				<?php
+				    $args = array(
+						'post_type' => array('servicios_generales'),
+						'p' 		=> 2300
+				    );
+					$the_query = new WP_Query ($args);
+				    $i = 0;
+				    if ( have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post();
+				    	$i++;
+				?>
+				<div id="serv4xs" class="content_servicio collapse">
+			        <div id="serv4xsancla" class="anclita"></div>
+			        <div class="container">
+			        	<h4 class="divider verde"><?php the_title(); ?></h4>
+			            <div class="close_servicio" data-target="#serv4xs"> </div>
+			            <div class="row">
+			            	<div class="col-md-6 col-md-push-6">
+			                	<div class="img_servicio"  style="background: url(<?php echo get_the_post_thumbnail_url(); ?>);"></div>
+			                </div>
+			                <div class="col-md-6 col-md-pull-6 ">
+			                	<div class="desc_servicio">
+			                    	<?php the_content(); ?>
+			                    </div>
+			                </div>
+			            </div>
+			        </div>
+			    </div><!-- content lavado de autos -->
+				<?php endwhile; else: ?>
+				<?php endif; ?>
+				<?php wp_reset_postdata(); ?>
+
   </div>
 </div>
 
