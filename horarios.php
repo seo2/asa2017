@@ -9,15 +9,15 @@ Template name: Horarios
 <?php include('include-top.php') ?>
 <?php //include('include-slider-servicios-cliente.php') ?>
 <?php include('include-search-no-slider.php') ?>
-<?php 
+<?php
 // TRADUCCIONES
 if(ICL_LANGUAGE_CODE=='en'){
 	$tit3 = "TIME SCHEDULES";
-}elseif(ICL_LANGUAGE_CODE=='pt-br'){ 
+}elseif(ICL_LANGUAGE_CODE=='pt-br'){
 	$tit3 = "HORÁRIOS";
-}else{ 
+}else{
 	$tit3 = "Horarios";
-} ?>  
+} ?>
      <div class="titulo_seccion sin_slider">
         <div class="container">
           <div class="row">
@@ -42,21 +42,21 @@ if(ICL_LANGUAGE_CODE=='en'){
 		                     <div class="desc_servicio">
 		                        <section class="box_horarios">
 		                            <div class="col-sm-12">
-                                    
-									<?php	                                         
+
+									<?php
 									    $args = array(
 											'page_id' => 24
 									    );
 										$the_query = new WP_Query ($args);
 									    if ( have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post();
-									    	
-									?>	                                    
+
+									?>
                                 	<?php the_content(); ?>
 									<?php endwhile; else: ?>
-									<?php endif; ?>	
-	                                 
+									<?php endif; ?>
+
                                       <div class="panel-group " id="accordion" role="tablist" aria-multiselectable="true">
-        							<?php	                                         
+        							<?php
         							    $args = array(
         									'post_type' 		=> array('horario'),
 											'posts_per_page' 	=> -1
@@ -65,7 +65,7 @@ if(ICL_LANGUAGE_CODE=='en'){
         							    $i = 0;
         							    if ( have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post();
         							    	$i++;
-        							?>	                    
+        							?>
                                            <div class="panel panel-default">
                                              <div class="panel-heading" role="tab" id="">
                                                  <!-- <div class="ribbon"></div> -->
@@ -77,13 +77,13 @@ if(ICL_LANGUAGE_CODE=='en'){
                                              </div>
                                              <div id="q<?php echo $i; ?>" class="panel-collapse collapse" role="tabpanel" aria-labelledby="">
                                                <div class="panel-body">
-					 
+
 											   	<?php
 													$horarios = get_order_group('fila_titulo_1');
-													foreach($horarios as $horario){   
-												?>        
+													foreach($horarios as $horario){
+												?>
                                                    <div class="row">
-                                                         <div class="col-sm-6"> 
+                                                         <div class="col-sm-6">
 	                                                         <h4><?php echo get('fila_titulo_1',$horario); ?></h4>
                                                              <p><?php echo get('fila_texto_1',$horario); ?></p>
                                                          </div>
@@ -99,27 +99,27 @@ if(ICL_LANGUAGE_CODE=='en'){
                                                </div>
                                              </div>
                                            </div>
-    											<?php endwhile; else: ?>
-    											<?php endif; ?>
-    											<?php wp_reset_query(); ?>
-    											<?php $i++; ?>
+								<?php endwhile; else: ?>
+								<?php endif; ?>
+								<?php wp_reset_query(); ?>
+								<?php $i++; ?>
                                            <div class="panel panel-default hide">
                                               <div class="panel-heading" role="tab" id="">
                                                   <!-- <div class="ribbon"></div> -->
                                                 <h4 class="panel-title">
                                                   <a class="cd-faq-trigger collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#q<?php echo $i; ?>" aria-expanded="false" aria-controls="q<?php echo $i; ?>">
-                                                   ESTACIONAMIENTOS PARQUE ARAUCO
+                                                		ESTACIONAMIENTOS PARQUE ARAUCO
                                                   </a>
                                                 </h4>
                                               </div>
                                               <div id="q<?php echo $i; ?>" class="panel-collapse collapse" role="tabpanel" aria-labelledby="">
                                                 <div class="panel-body nopad">
                                                      <div class="row">
-                                                       <div class="col-sm-12"> 
+                                                       <div class="col-sm-12">
                                                            <p> Lunes a domingo abierto desde las 07:00 y acceso restringido a partir de las 23:30 hrs.</p>
                                                        </div>
                                                      </div>
-                                              
+
                                                 <table id="table_horarios_estacionamientos" class="table table-bordered hide">
                                                      <tr>
                                                        <td colspan="5" align="center" class="titulo_tabla">
@@ -185,9 +185,9 @@ if(ICL_LANGUAGE_CODE=='en'){
                                                      </table> <!-- end tabla horarios -->
                                                 </div>
                                               </div>
-                                            </div>                                           
+                                            </div>
 										</div> <!-- END panel group -->
-                                    
+
 									</div>
 								</section> <!-- box horarios del mall -->
                             </div> <!-- end desc_servicio -->

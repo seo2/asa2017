@@ -7,7 +7,7 @@
         <div class="box_servicio" id="serv2box">
           <a href="javascript:void(0);" class="borde_azul" data-toggle="collapse" data-target="#content_casas_cambio">
               <img src="<?php bloginfo('template_url'); ?>/assets/img/casa_cambio.svg"   class="center-block">
-              <!-- <p><?php echo $serv2; ?></p> -->
+
                       <p> Casas de cambio</p>
           </a>
         </div>
@@ -20,7 +20,7 @@
         <div class="box_servicio" id="serv4box">
           <a href="javascript:void(0); " class="borde_amarillo" data-toggle="collapse" data-target="#content_taxis">
               <img src="<?php bloginfo('template_url'); ?>/assets/img/taxis.svg"  class="center-block">
-              <!-- <p><?php echo $serv4; ?></p> -->
+
                       <p> Lavado de autos</p>
           </a>
         </div>
@@ -33,8 +33,8 @@
 
 	<?php
 	    $args = array(
-			'post_type' 		=> array('servicios_generales'),
-			'p' 				=> 2222
+			'post_type' => array('servicios_generales'),
+			'p' 		=> 2222
 	    );
 		$the_query = new WP_Query ($args);
 	    $i = 0;
@@ -46,25 +46,26 @@
               <div class="container">
               <h4 class="divider azul"><?php the_title(); ?></h4>
                <div class="close_servicio" data-target="#serv2"> </div>
-              <div class="row">
-                  <div class="col-md-6 col-md-push-6">
-                      <div class="img_servicio"  style="background: url(<?php echo get_the_post_thumbnail_url(); ?>);"></div>
-                  </div>
-                      <div class="col-md-6 col-md-pull-6 ">
-                      <div class="desc_servicio">
-                        <?php the_content(); ?>
-                      </div>
-                      </div>
+					<div class="row">
+						<div class="col-md-6 col-md-push-6">
+							<div class="img_servicio"  style="background: url(<?php echo get_the_post_thumbnail_url(); ?>);"></div>
+						</div>
+						<div class="col-md-6 col-md-pull-6 ">
+							<div class="desc_servicio">
+								<?php the_content(); ?>
+							</div>
+						</div>
+					</div>
               </div>
-              </div>
-            </div><!-- casas de cambio -->
+    </div><!-- casas de cambio -->
 	<?php endwhile; else: ?>
 	<?php endif; ?>
+	<?php wp_reset_postdata(); ?>
 
 	<?php
 	    $args = array(
-			'post_type' 		=> array('servicios_generales'),
-			'p' 				=> 2223
+			'post_type' => array('servicios_generales'),
+			'p' 		=> 2223
 	    );
 		$the_query = new WP_Query ($args);
 	    $i = 0;
@@ -90,7 +91,7 @@
     </div> <!-- content taxis -->
 	<?php endwhile; else: ?>
 	<?php endif; ?>
-
+	<?php wp_reset_postdata(); ?>
 
 	</div>
 </div>
