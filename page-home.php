@@ -80,7 +80,7 @@ if(ICL_LANGUAGE_CODE=='en'){
 								$e++;
 						?>
                            <div class="item">
-                               <a href="<?php bloginfo('url'); ?>/food-court-tiendas/#patio-de-comida">
+                               <a href="<?php bloginfo('url'); ?>/patio-de-comidas#tiendas">
 	                            <?php if($e==1){ ?>
                                    <div class="caption foodcourt">
                                       <p>NUESTRA VARIEDAD en </p>
@@ -236,6 +236,7 @@ if(ICL_LANGUAGE_CODE=='en'){
 								<input type="text" class="form-control" id="modNom" placeholder="Ingreso de datos" name="modNom" required>
                         	</div>
                       	</div>
+
 					  	<div class="col-6">
                         	<div class="form-group">
 								<label for="exampleInputEmail1">apellidos:</label>
@@ -514,9 +515,7 @@ if(ICL_LANGUAGE_CODE=='en'){
 				   <button type="submit" class="btn btn-default btn_rojo center-block">Enviar</button>
                 </form>
             </div><!-- box_form -->
-
         </div><!-- box_modal -->
-  </div><!-- modal overlay -->
-
+</div><!-- modal overlay -->
 <?php include('footer.php') ?>
 

@@ -28,11 +28,12 @@
                 <div class="row">
                 <ul class="nav navbar-nav lista_menu">
 					<li class="active"><a href="<?php bloginfo('url'); ?>">Home</a></li>
-					<li><a id="btn_tiendas" href="<?php bloginfo('url'); ?>/tiendas#tiendas"><?php echo $menu7; ?></a></li>
-					<li><a id="btn_boulevard" href="<?php bloginfo('url'); ?>/food-court-tiendas#tiendas"><?php echo $menu3; ?></a></li>
-					<li><a id="btn_piso" href="<?php bloginfo('url'); ?>/novedades"><?php echo $menu4; ?></a></li>
-					<li><a id="btn_entretencion" href="<?php bloginfo('url'); ?>/novedades#entretencion"><?php echo $menu5; ?></a></li>
-					<li><a href="<?php bloginfo('url'); ?>/servicio-al-cliente"><?php echo $menu10; ?></a></li>
+					<li><a href="<?php bloginfo('url'); ?>/tiendas#tiendas">tiendas</a></li>
+					<li><a href="<?php bloginfo('url'); ?>/patio-de-comidas#tiendas">patio de comidas</a></li>
+					<li><a href="<?php bloginfo('url'); ?>/novedades#novedades">NOVEDADES / ACTIVIDADES</a></li>
+					<li><a href="<?php bloginfo('url'); ?>//novedades-galeria/#galerias">galería</a></li>
+					<li><a href="<?php bloginfo('url'); ?>/novedades#entretencion">entretencion</a></li>
+					<li><a href="<?php bloginfo('url'); ?>/servicio-al-cliente">servicio al cliente</a></li>
                      <!-- <li><a id="btn_novedades" href="<?php bloginfo('url'); ?>/novedades#novedades"><?php echo $menu6; ?></a></li> -->
                 </ul>
                     <div class="divisor_h text-center"></div>
@@ -59,7 +60,7 @@
 		                                        <a href="<?php bloginfo('url'); ?>/horarios"><i class="fa fa-clock-o" aria-hidden="true"></i>  <?php echo $tit1; ?> </a>
 		                                      </li>
 		                                      <li>
-		                                        <a href="https://www.google.cl/maps/place/Mall+Arauco+Quilicura/@-33.3673366,-70.7310678,17z/data=!3m1!4b1!4m5!3m4!1s0x9662c0b826dd4fb3:0x91adb5570148d070!8m2!3d-33.3673411!4d-70.7288791" target="_blank"><i class="fa fa-map-marker" aria-hidden="true"></i><?php echo $tit2; ?> </a>
+		                                        <a href="https://www.google.cl/maps/place/Arauco+San+Antonio/@-33.5819812,-71.6160361,17z/data=!3m1!4b1!4m5!3m4!1s0x966238e6aa6391c9:0x39ebbb26447ed37c!8m2!3d-33.5819812!4d-71.6138421" target="_blank"><i class="fa fa-map-marker" aria-hidden="true"></i><?php echo $tit2; ?> </a>
 		                                      </li>
 		                                    </ul>
 		                              </div>

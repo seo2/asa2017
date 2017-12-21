@@ -1,18 +1,18 @@
-<?php 
+<?php
 // TRADUCCIONES
 if(ICL_LANGUAGE_CODE=='en'){
 	$tit1 = "CUSTOMER SERVICE";
 	$tit2 = "EVERYTHING YOU NEED TO KNOW";
 	$tit3 = "Where we are, parking fees, contact and FAQ.";
-}elseif(ICL_LANGUAGE_CODE=='pt-br'){ 
+}elseif(ICL_LANGUAGE_CODE=='pt-br'){
 	$tit1 = "SERVIÇO AO CLIENTE:";
 	$tit2 = "TUDO QUE VOCÊ PRECISA SABER";
 	$tit3 = "Onde estamos, taxas de estacionamento, contato e perguntas mais frequentes.";
-}else{ 
+}else{
 	$tit1 = "servicio al cliente";
 	$tit2 = "TODO LO QUE NECESITAS SABER";
 	$tit3 = "Dónde estamos, estacionamiento, contacto y preguntas frecuentes.";
-} ?> 
+} ?>
     		<div class="row">
                 <div class="col-sm-12">
                     <div class="image_dynamic hover">
@@ -29,10 +29,10 @@ if(ICL_LANGUAGE_CODE=='en'){
             </div><!-- END MAIN ROW -->
 		</div> <!-- END MAIN CONTAINER -->
     </section> <!-- END MAIN_CONTENT -->
-            
+
     <?php include('include-visitanos.php') ?>
 
-<?php 
+<?php
 // TRADUCCIONES
 if(ICL_LANGUAGE_CODE=='en'){
 	$menu1 = "Investor Relations";
@@ -43,7 +43,7 @@ if(ICL_LANGUAGE_CODE=='en'){
 	$menu6 = "SUPPLIERS AND TENANTS";
 	$menu7 = "LEGAL BASIS FOR TENDERS";
 	$tit1  = "see on maps";
-}elseif(ICL_LANGUAGE_CODE=='pt-br'){ 
+}elseif(ICL_LANGUAGE_CODE=='pt-br'){
 	$menu1 = "RELAÇÕES COM INVESTIDORES";
 	$menu2 = "CONTATO COMERCIAL";
 	$menu3 = "CÓDIGO DE CONDUTA EMPRESARIAL";
@@ -52,7 +52,7 @@ if(ICL_LANGUAGE_CODE=='en'){
 	$menu6 = "PROVEDORES E LOCATARIOS";
 	$menu7 = "CONCURSOS LEGAIS";
 	$tit1  = "VER NO MAPA";
-}else{ 
+}else{
 	$menu1 = "Investor Relations";
 	$menu2 = "Contacto Comercial";
 	$menu3 = "Código Conducta Empresarial";
@@ -61,7 +61,7 @@ if(ICL_LANGUAGE_CODE=='en'){
 	$menu6 = "Proveedores y Locatarios";
 	$menu7 = "Legales concursos";
 	$tit1  = "ver en mapa";
-} ?> 
+} ?>
     <div class="container">
      <footer>
       <div class="row">
@@ -83,12 +83,12 @@ if(ICL_LANGUAGE_CODE=='en'){
                     <i class="fa fa-map-marker" aria-hidden="true"></i>
                   </div>
                   <div class="bullet-content">
-                    <h2>Arauco Quilicura</h2>
-                    <p>O´Higgins 581,<br>
-                    Quilicura<br>
-                    <a href="https://www.google.cl/maps/place/Mall+Arauco+Quilicura/@-33.3673366,-70.7310678,17z/data=!4m5!3m4!1s0x9662c0b826dd4fb3:0x91adb5570148d070!8m2!3d-33.3673411!4d-70.7288794" class="link_rojo" target="_blank"><?php echo $tit1; ?></a></p>
+                    <h2>Arauco San Antonio</h2>
+                    <p>Ramón Barros Luco 105,<br>
+                    San Antonio<br>
+                    <a href="https://www.google.cl/maps/place/Arauco+San+Antonio/@-33.5819812,-71.6160361,17z/data=!3m1!4b1!4m5!3m4!1s0x966238e6aa6391c9:0x39ebbb26447ed37c!8m2!3d-33.5819812!4d-71.6138421" class="link_rojo" target="_blank"><?php echo $tit1; ?></a></p>
                   </div>
-                </li>  
+                </li>
                 <li class="bullet clearfix">
                   <div class="bullet-icon bullet-icon-2">
                     <i class="fa fa-clock-o" aria-hidden="true"></i>
@@ -104,11 +104,9 @@ if(ICL_LANGUAGE_CODE=='en'){
 <!--                     <p>DOMINGO E FERIADOS DAS 11:00H ATÉ AS 21:00H.</p> -->
 					<?php }else{  ?>
                     <h2>horarios</h2>
-                    <p>Lunes a Sábado de 10:00 a 21:00 hrs.<br>
-                      Domingos y Festivos de 11:00 a 21:00 hrs.<br>
-                      
-<!--                     <p>domingo y festivos de 11:00 a 21:00 hrs. </p> -->
-					<?php } ?> 	                  
+                    <p>Lunes a Domingo: 10:00 a 21:30 hrs.</p>
+
+					<?php } ?>
                   </div>
                 </li>
               </ul>
@@ -134,45 +132,43 @@ if(ICL_LANGUAGE_CODE=='en'){
                   </ul>
               </div>
               <script src="https://www.jscache.com/wejs?wtype=socialButtonBubbles&amp;uniq=464&amp;locationId=2491922&amp;color=green&amp;size=rect&amp;lang=es_CL&amp;display_version=2"></script>
-               
+
           </div>
 --> <!-- trip advisor -->
-      </div><!-- footer_bottom -->  
+      </div><!-- footer_bottom -->
     </div>
-    <!-- js --> 
-
+    <!-- js -->
 <?php wp_footer(); ?>
-
-<script> 
+<script>
 	$(function(){
   var currencies = [
-	  
+
 	  <?php
 	$categorias = $db->rawQuery("select * from pak_categorias where idioma = $idioma");
 	if($categorias){
 		foreach ($categorias as $p) {
-			
+
 			echo "{ value: '".addslashes($p['nombre_subcategoria'])."', id: '".$p['id_subcategoria']."', tipo: '-', busqueda: 'Cat' },";
 		}
-	}  	
+	}
 	$tiendas = $db->rawQuery("select * from pak_tiendas");
 	if($tiendas){
 		foreach ($tiendas as $t) {
-			
+
 			echo "{ value: '". str_replace("'", "",  addslashes($t['nombre']))."', id: '".$t['punto_interes']."', tipo: '".$t['tipo']."', busqueda: 'Tienda' },";
 		}
-	}    
+	}
 	  ?>
-    
+
   ];
-  
+
   // setup autocomplete function pulling from currencies[] array
   $('#input_search_home').autocomplete({
     lookup: currencies,
     onSelect: function (suggestion) {
      // alert(suggestion.busqueda+': '+suggestion.value+ ' - id: '+ suggestion.id);
-     
-      
+
+
       if(suggestion.busqueda=='Cat'){
 	      pagina = '<?php bloginfo('url'); ?>/tiendas?catID=';
       }else if(suggestion.busqueda=='Tienda'){
@@ -184,18 +180,18 @@ if(ICL_LANGUAGE_CODE=='en'){
 		      pagina = '<?php bloginfo('url'); ?>/bazar-central?tiendaID=';
 		  }
       }else{
-	      
+
       }
-      
+
 	  window.location.href = pagina+suggestion.id;
-      
+
     }
   });
-  
 
-}); 
 
-<?php 	
+});
+
+<?php
 	$url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
 	if (strpos($url,'distrito-de-lujo-tienda') !== false) {
 	    $dl = true;
@@ -211,7 +207,7 @@ if(ICL_LANGUAGE_CODE=='en'){
     $('body').toggleClass('menu_open');
 <?php } ?>
 
-</script>  
-  
+</script>
+
   </body>
 </html>
