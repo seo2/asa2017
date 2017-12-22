@@ -118,9 +118,11 @@ if(ICL_LANGUAGE_CODE=='en'){
                                     	
                                 		if(is_url_exist($logo)){
 	                                		$logo = $logo;
+	                                		$haylogo = 'si';
 									  	}else{
                                         	$logo 	= "/assets/img/logo_381.jpg?v=3";
 										  	$logo	= get_template_directory_uri().$logo;
+	                                		$haylogo = 'no';
 									  	}
                                     	
                                 
@@ -142,7 +144,11 @@ if(ICL_LANGUAGE_CODE=='en'){
                                             </a>
 											<div class="box_logo_tienda">
                                             	<div class="logo_tienda">
+	                                            	<?php if($haylogo=='si'){ ?>
                                                 	<img src="<?php echo $logo; ?>" alt="" class="img-responsive">
+                                                	<?php }else{ ?>
+                                                	<p><?php echo $t['nombre']; ?></p>
+                                                	<?php } ?>
                                             	</div> <!-- logo_tienda -->
                                         	</div> <!-- box logo tienda -->
                                         </div> <!--  tienda -->
