@@ -56,9 +56,11 @@ Template name: Boulevard Tiendas
                                     	
                                 		if(is_url_exist($logo)){
 	                                		$logo = $logo;
+	                                		$haylogo = 'si';
 									  	}else{
                                         	$logo 	= "/assets/img/logo_381.jpg?v=3";
 										  	$logo	= get_template_directory_uri().$logo;
+	                                		$haylogo = 'no';
 									  	}
 
                                 ?>
@@ -73,9 +75,13 @@ Template name: Boulevard Tiendas
 					                            <img class="img-responsive" src="<?php echo $imagen; ?>">
 					                        </a>
 				                            <div class="box_logo_tienda">
-				                                <div class="logo_tienda">
-				                                    <img src="<?php echo $logo; ?>" alt="" class="img-responsive">
-				                                </div> <!-- logo_tienda -->
+												<?php if($haylogo=='si'){ ?>
+                                            	<div class="logo_tienda">
+                                                	<img src="<?php echo $logo; ?>" alt="" class="img-responsive">
+                                            	</div> <!-- logo_tienda -->
+                                            	<?php }else{ ?>
+                                            	<p><?php echo $t['nombre']; ?></p>
+                                            	<?php } ?>
 				                            </div> <!-- box logo tienda -->
 				                        </div> <!--  tienda -->
 				                    </div> <!-- item tienda -->

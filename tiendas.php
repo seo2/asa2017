@@ -143,13 +143,13 @@ if(ICL_LANGUAGE_CODE=='en'){
                                                 <img class="img-responsive" src="<?php echo $imagen; ?>">
                                             </a>
 											<div class="box_logo_tienda">
+	                                            <?php if($haylogo=='si'){ ?>
                                             	<div class="logo_tienda">
-	                                            	<?php if($haylogo=='si'){ ?>
                                                 	<img src="<?php echo $logo; ?>" alt="" class="img-responsive">
-                                                	<?php }else{ ?>
-                                                	<p><?php echo $t['nombre']; ?></p>
-                                                	<?php } ?>
                                             	</div> <!-- logo_tienda -->
+                                            	<?php }else{ ?>
+                                            	<p><?php echo $t['nombre']; ?></p>
+                                            	<?php } ?>
                                         	</div> <!-- box logo tienda -->
                                         </div> <!--  tienda -->
                                     </div> <!-- item tienda -->
