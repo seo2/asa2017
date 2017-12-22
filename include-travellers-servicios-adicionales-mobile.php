@@ -5,7 +5,7 @@
         <div class="box_servicio" id="serv1xsbox">
           <a href="javascript:void(0);" class="borde_azul"  data-toggle="collapse" data-target="#serv1xs">
               <img src="<?php bloginfo('template_url'); ?>/assets/img/afex.svg"  class="center-block">
-             <!--  <p><?php echo $serv1; ?></p> -->
+
              <p>Casas de cambio</p>
           </a>
         </div>
@@ -28,7 +28,7 @@
 
     <div class="col-xs-6">
         <div class="box_servicio" id="serv3xsbox">
-          <a href="javascript:void(0);" class="borde_rojo data-toggle="collapse" data-target="#serv3xs">
+          <a href="javascript:void(0);" class="borde_rojo" data-toggle="collapse" data-target="#serv3xs">
               <img src="<?php bloginfo('template_url'); ?>/assets/img/servipag.svg"  class="center-block">
               <p>Servicios de pago</p>
           </a>

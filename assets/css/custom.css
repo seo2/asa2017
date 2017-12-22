@@ -2271,3 +2271,27 @@ section.top .navbar-header .logo a {
     display: inline-block;
     background: url(../img/logo_arauco_san_antonio.svg) no-repeat;
 }
+section.main_content section.servicios_cliente .content_servicio .desc_servicio a{
+	margin-left: 0;
+}
+
+.box_logo_tienda p{
+
+	color: white;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	font-family: 'superclarendonlight_italic', Helvetica, Arial, sans-serif;
+	font-size: 10px;
+	color: black;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	text-align: center;
+	transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+
+
+
+}
