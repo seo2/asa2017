@@ -35,11 +35,11 @@ if(ICL_LANGUAGE_CODE=='en'){
                         <img src="<?php bloginfo('template_url'); ?>/assets/img/logos_mall/arauco_coronel.svg" alt="" class="center-block">
                     </a>
                 </div>
-                <div class="item">
+            <!--     <div class="item">
                     <a href="http://www.araucosanantonio.cl/" target="_blank">
                         <img src="<?php bloginfo('template_url'); ?>/assets/img/logos_mall/arauco_san_antonio.svg" alt="" class="center-block">
                     </a>
-                </div>
+                </div> -->
                 <div class="item">
                     <a href="http://www.araucochillan.cl/" target="_blank">
                         <img src="<?php bloginfo('template_url'); ?>/assets/img/logos_mall/arauco_chillan.svg" alt="" class="center-block">
