@@ -72,6 +72,7 @@
 						</div>
 						<div class="col-md-6 col-md-pull-6 ">
 							<div class="desc_servicio">
+								<img class="img-responsive" src="<?php bloginfo('template_url'); ?>/assets/img/logo-afex.jpg" alt="">
 								<?php the_content(); ?>
 							</div>
 						</div>
@@ -103,6 +104,7 @@
                 </div>
 				<div class="col-md-6 col-md-pull-6 ">
 					<div class="desc_servicio">
+						<img class="img-responsive" src="<?php bloginfo('template_url'); ?>/assets/img/logo-santaisabel.jpg" alt="">
 						<?php the_content(); ?>
 					</div>
 				</div>
@@ -134,6 +136,7 @@
 	                </div>
 					<div class="col-md-6 col-md-pull-6 ">
 						<div class="desc_servicio">
+							<img class="img-responsive" src="<?php bloginfo('template_url'); ?>/assets/img/logo-servipag.jpg" alt="">
 							<?php the_content(); ?>
 						</div>
 					</div>
@@ -165,6 +168,7 @@
 		                </div>
 						<div class="col-md-6 col-md-pull-6 ">
 							<div class="desc_servicio">
+								<img class="img-responsive" src="<?php bloginfo('template_url'); ?>/assets/img/logo-hotel.jpg" alt="">
 								<?php the_content(); ?>
 							</div>
 						</div>

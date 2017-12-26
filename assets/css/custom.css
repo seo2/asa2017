@@ -2294,6 +2294,10 @@ section.main_content section.servicios_cliente .content_servicio .desc_servicio 
 
 }
 
+section.main_content section.travellers_servicios_adicionales .content_servicio .desc_servicio a{
+	margin-left: 0;
+}
+
 /*NUEVO CSS MODAL*/
 .modal_overlay {
 	position: fixed;
