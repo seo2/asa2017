@@ -224,7 +224,7 @@ if(ICL_LANGUAGE_CODE=='en'){
 
 					</div>
 				</div>
-				<h2 class="title_modal">suscríbete a nuestras novedades</h2>
+				<h2 class="title_modal">SUSCRÍBETE Y SÉ EL PRIMERO EN ENTERARTE DE NUESTRAS NOVEDADES</h2>
 			</div> <!-- header modal -->
 
             <div class="box_form">

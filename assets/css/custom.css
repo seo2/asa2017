@@ -2367,7 +2367,11 @@ section.main_content section.travellers_servicios_adicionales .content_servicio 
 .modal_overlay .box_modal .header_modal h2.title_modal{
 	color: #0055A1;
 }
-
+@media(max-width: 768px){
+	.modal_overlay .box_modal .header_modal h2.title_modal{
+		font-size: 18px;
+	}
+}
 #formModal .form-group .form-control input{
     font-family: 'PT Sans',sans-serif, Arial, Helvetica, sans-serif;
     font-size: 12px;
