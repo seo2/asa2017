@@ -2317,6 +2317,12 @@ section.main_content section.travellers_servicios_adicionales .content_servicio 
     	width: 900px;
 	}
 }
+@media (max-width: 1023px){
+	.modal_overlay .box_modal {
+	padding-top: 70px;
+	}
+}
+
 
 @media (max-width: 768px){
 	.modal_overlay .box_modal {
@@ -2342,6 +2348,11 @@ section.main_content section.travellers_servicios_adicionales .content_servicio 
 .modal_overlay .box_modal .header_modal .logo{
 	width: 116px;
     height: 84px;
+}
+@media (max-width: 1023px){
+	.modal_overlay .box_modal .header_modal .logo{
+		margin: 20px auto 0 auto;
+	}
 }
 
 @media(max-width: 768px){

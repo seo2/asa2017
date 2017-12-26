@@ -216,11 +216,12 @@ if(ICL_LANGUAGE_CODE=='en'){
 			<a href="javascript:(0);" class="close_modal"></a>
 			<div class="header_modal">
 				<div class="row">
-					<div class="col-3">
-						<div class="logo"> </div>
-					</div>
 					<div class="col-9">
 						<div class="img_mall"> </div>
+					</div>
+					<div class="col-3">
+						<div class="logo"> </div>
+
 					</div>
 				</div>
 				<h2 class="title_modal">suscríbete a nuestras novedades</h2>
