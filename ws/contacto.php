@@ -8,7 +8,7 @@ if ($ajax) {
 	require_once("_lib/config.php");
 	require_once("_lib/MysqliDb.php");
 	$db = new MysqliDb (DBHOST, DBUSER, DBPASS, DBNAME);
-	
+
 	$nom	 	= filter_var($_POST["nombre"], FILTER_SANITIZE_STRING);
 	$rut	 	= filter_var($_POST["rut"], FILTER_SANITIZE_STRING);
 	$fono	 	= filter_var($_POST["fono"], FILTER_SANITIZE_STRING);
@@ -21,47 +21,47 @@ if ($ajax) {
 
 
 if($tipo==1){
-	$servicio = "Servicio al Cliente";	
+	$servicio = "Servicio al Cliente";
 	$to = "lcerda@parauco.com";
 }elseif($tipo==2){
-	$servicio = "Estacionamientos";	
-	$to = "jsandoval@parauco.com";
+	$servicio = "Estacionamientos";
+	$to = "lcerda@parauco.com";
 }elseif($tipo==3){
-	$servicio = "Actividades del mall";	
-	$to = "mfgutierrez@parauco.com";
+	$servicio = "Actividades del mall";
+	$to = "dmusri@parauco.com";
 }elseif($tipo==4){
-	$servicio = "Arriendo espacios y locales";	
-	$to = "mparaud@parauco.com";
+	$servicio = "Arriendo espacios y locales";
+	$to = "mjbenavides@parauco.com";
 }elseif($tipo==5){
-	$servicio = "Arriendo Plazas, Activaciones y Medios";	
+	$servicio = "Arriendo Plazas, Activaciones y Medios";
 	$to = "tmendez@parauco.com";
 }elseif($tipo==6){
-	$servicio = "Arriendo Módulos";	
-	$to = "jmarin@parauco.com";
+	$servicio = "Arriendo Módulos";
+	$to = "claudio.gonzalez@parauco.com";
 }elseif($tipo==7){
-	$servicio = "Sitio web y redes sociales";	
-	$to = "cgarcia@parauco.com";
+	$servicio = "Sitio web y redes sociales";
+	$to = "dmusri@parauco.com";
 }
-	
+
 //	$to 	 = 'seodos@gmail.com';
-	
+
 	$message = '<html><body>';
 	$message .= '<div>';
-	$message .= "<p>De:  <strong>".$nom." </strong></p>";  
-	$message .= "<p>Correo: <strong>".$mail." </strong></p>";  
-	$message .= "<p>Fono: <strong>".$fono." </strong></p>";   
-	$message .= "<p>Motivo: <strong>".$motivo." </strong></p>";   
-	$message .= "<p>TIpo de Servicio: <strong>".$servicio." </strong></p>";  
-	$message .= "<p>Mensaje:</p>"; 
-	$message .= "<p> <strong>".$mensaje." </strong></p>";  
+	$message .= "<p>De:  <strong>".$nom." </strong></p>";
+	$message .= "<p>Correo: <strong>".$mail." </strong></p>";
+	$message .= "<p>Fono: <strong>".$fono." </strong></p>";
+	$message .= "<p>Motivo: <strong>".$motivo." </strong></p>";
+	$message .= "<p>TIpo de Servicio: <strong>".$servicio." </strong></p>";
+	$message .= "<p>Mensaje:</p>";
+	$message .= "<p> <strong>".$mensaje." </strong></p>";
 	$message .= "</div>";
 	$message .= "</body></html>";
-	
+
 	$subject = 'Mensaje desde araucocoronel.cl';
 	$headers = "From: " . "<no-reply@araucocoronel.cl> Contacto Arauco Coronel" . "\r\n";
 	$headers .= "MIME-Version: 1.0\r\n";
 	$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
-	
+
 	mail($to, $subject, $message, $headers);
 
 	date_default_timezone_set('America/Santiago');
@@ -79,7 +79,7 @@ if($tipo==1){
 		  'conOptIn'	=> $optIn,
 		  'conTS'   => $ahora
 		);
-		
+
 		$db->insert ('pak_contacto', $data);
 
 
