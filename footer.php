@@ -73,7 +73,7 @@ if(ICL_LANGUAGE_CODE=='en'){
               <li><a href="<?php bloginfo('url'); ?>/terminos-y-condiciones"><?php echo $menu4; ?></a></li>
               <li><a href="http://sistemas.parquearauco.cl/Relatorios/Inicio.aspx" target="_blank"><?php echo $menu5; ?></a></li>
               <li><a href="http://sistemas.parquearauco.cl/Portal" target="_blank"><?php echo $menu6; ?></a></li>
-             <!--  <li><a href="<?php bloginfo('url'); ?>/legales-concursos"><?php echo $menu7; ?></a></li> -->
+              <li><a href="<?php bloginfo('url'); ?>/legales-concursos"><?php echo $menu7; ?></a></li>
             </ul>
           </div>
           <div class="col-xs-12 col-sm-6">

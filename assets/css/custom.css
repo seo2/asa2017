@@ -2271,3 +2271,137 @@ section.top .navbar-header .logo a {
     display: inline-block;
     background: url(../img/logo_arauco_san_antonio.svg) no-repeat;
 }
+section.main_content section.servicios_cliente .content_servicio .desc_servicio a{
+	margin-left: 0;
+}
+
+.box_logo_tienda p{
+
+	color: white;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	font-family: 'superclarendonlight_italic', Helvetica, Arial, sans-serif;
+	font-size: 10px;
+	color: black;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	text-align: center;
+	transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+
+}
+
+section.main_content section.travellers_servicios_adicionales .content_servicio .desc_servicio a{
+	margin-left: 0;
+}
+
+/*NUEVO CSS MODAL*/
+.modal_overlay {
+	position: fixed;
+	left: 0;
+	top: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 2000;
+	height: 100%;
+	width: 100%;
+	overflow-x: hidden;
+}
+.modal_overlay .box_modal{
+	top: 420px;
+}
+@media (min-width: 1024px) {
+	.modal_overlay .box_modal {
+    	width: 900px;
+	}
+}
+@media (max-width: 1023px){
+	.modal_overlay .box_modal {
+	padding-top: 70px;
+	}
+}
+
+
+@media (max-width: 768px){
+	.modal_overlay .box_modal {
+	 top: 550px;
+	  height: auto;
+	}
+}
+@media (max-width: 480px){
+	.modal_overlay .box_modal {
+	 top: 660px;
+	  height: auto;
+	}
+}
+
+
+.modal_overlay .box_modal .header_modal .img_mall{
+	background: url(../img/img_modal_sa.jpg) no-repeat;
+	background-position: center;
+	background-size: cover;
+	width: 100%;
+	height: 199px;
+}
+.modal_overlay .box_modal .header_modal .logo{
+	width: 116px;
+    height: 84px;
+}
+@media (max-width: 1023px){
+	.modal_overlay .box_modal .header_modal .logo{
+		margin: 20px auto 0 auto;
+	}
+}
+
+@media(max-width: 768px){
+	.modal_overlay .box_modal .header_modal .logo{
+		position: relative;
+		top: auto;
+		left: auto;
+		-webkit-transform: none;
+		transform: none;
+	}
+}
+.modal_overlay .box_modal .header_modal h2.title_modal{
+	color: #0055A1;
+}
+@media(max-width: 768px){
+	.modal_overlay .box_modal .header_modal h2.title_modal{
+		font-size: 18px;
+	}
+}
+#formModal .form-group .form-control input{
+    font-family: 'PT Sans',sans-serif, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+.modal_overlay .box_modal .box_form form .btn_rojo{
+	background-color: #E20D27 !important;
+}
+.modal_overlay .box_modal .box_form form .btn_rojo:hover{
+	background-color: #fff !important;
+	border-color: black !important;
+	color: black !important;
+}
+.modal_overlay .box_modal .box_form form .btn-default{
+	position: relative;
+	left: auto;
+	transform: none;
+	-webkit-transform: none;
+}
+.modal_overlay .box_modal .box_form form .form-group input.form-control,
+.modal_overlay .box_modal .box_form form .form-group select.form-control{
+	font-style: italic;
+	font-size: 12px;
+	font-family: 'euphemia_ucasitalic', Helvetica, Arial, sans-serif;
+}
+
+/*fin css nuevo modal*/
+section.main_content section.travellers_servicios_adicionales .content_servicio .desc_servicio p{
+	padding: 0 20px 0 10px;
+}
+section.main_content section.travellers_servicios_adicionales .content_servicio .desc_servicio img{
+	margin-bottom: 10px;
+}
+

@@ -124,7 +124,7 @@ if(ICL_LANGUAGE_CODE=='en'){
                                      <li class="active"><a href="<?php bloginfo('url'); ?>">Home</a></li>
                                      <li><a href="<?php bloginfo('url'); ?>/tiendas#tiendas">tiendas</a></li>
                                      <li><a href="<?php bloginfo('url'); ?>/patio-de-comidas#tiendas">patio de comidas</a></li>
-                                     <li><a href="<?php bloginfo('url'); ?>/novedades#novedades">NOVEDADES / ACTIVIDADES</a></li>
+                                   <!--   <li><a href="<?php bloginfo('url'); ?>/novedades#novedades">NOVEDADES / ACTIVIDADES</a></li> -->
                                      <li><a href="<?php bloginfo('url'); ?>/novedades-galeria/#galerias"><?php echo $menu8; ?></a></li>
                                 </ul>
                             </div>
@@ -132,7 +132,6 @@ if(ICL_LANGUAGE_CODE=='en'){
                             <div class="divisor_h"></div>
                             <div class="col-sm-12 col-md-6">
 							<ul class="nav navbar-nav">
-								<li class="hidden-xs hidden-sm"><a class="invisible" href="javascript:void(0);">&nbsp</a></li>
 								<li class="hidden-xs hidden-sm"><a class="invisible" href="javascript:void(0);">&nbsp</a></li>
 								<li class="hidden-xs hidden-sm"><a class="invisible" href="javascript:void(0);">&nbsp</a></li>
 								<li><a href="<?php bloginfo('url'); ?>/novedades#entretencion">entretención</a></li>
