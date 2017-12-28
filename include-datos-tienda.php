@@ -42,6 +42,9 @@ if(isset($_GET['tiendaID'])){
 			$fono	= $t['telefono_punto_interes'];
 			$piso	= $t['numero_piso']; 
 			$url	= $t['url_punto_interes']; 
+			if (strpos($url,'http://') === false){
+			    $url = 'http://'.$url;
+			}
 	    }
 	}
 	$style = 'style="display:block"';
