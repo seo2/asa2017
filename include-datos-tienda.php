@@ -76,7 +76,7 @@ if(isset($_GET['tiendaID'])){
 <!--                         <h4> PISO <span class="piso"><?php echo $piso; ?></span></h4>  -->
 						
                         <div class="clearfix"></div>
-                        <a href="<?php echo $url; ?>" target="_blank" class="url"><?php echo $url; ?></a>
+                        <a href="<?php echo $url; ?>" target="_blank" class="url"><?php echo preg_replace('#^https?://#', '', $url); ?></a>
                         <div class="share_tienda">
                         	<ul>
                             	<li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fs219687.gridserver.com%2Fclientes%2Fbond%2Fpak%2F&t=" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL),'Facebook Sharer', 'width=500,height=500'); return false;"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
