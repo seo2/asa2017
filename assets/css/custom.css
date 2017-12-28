@@ -2398,5 +2398,10 @@ section.main_content section.travellers_servicios_adicionales .content_servicio 
 }
 
 /*fin css nuevo modal*/
-
+section.main_content section.travellers_servicios_adicionales .content_servicio .desc_servicio p{
+	padding: 0 20px 0 10px;
+}
+section.main_content section.travellers_servicios_adicionales .content_servicio .desc_servicio img{
+	margin-bottom: 10px;
+}
 
