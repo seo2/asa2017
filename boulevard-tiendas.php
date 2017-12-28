@@ -15,7 +15,8 @@ Template name: Boulevard Tiendas
               <section class="tiendas">
               <div id="tiendas" class="anchor_seccion"></div>
                   <h4 class="divider">Patio de Comidas</h4>
-                   <a href="food-court.php" class="back">< <?php echo $back; ?></a>
+
+                   <a href="<?php bloginfo('url'); ?>" class="back">< <?php echo $back; ?></a>
                       <div class="grid_tiendas center-block">
                           <div class="container">
                               <div class="row" id="caja_tienda">
@@ -27,7 +28,7 @@ Template name: Boulevard Tiendas
 									$tiendas = $db->rawQuery("select * from pak_tiendas where tipo = 2 order by nombre limit 12");
 								}
 								if($tiendas){
-									foreach ($tiendas as $t) {   
+									foreach ($tiendas as $t) {
                                     	$imagen = get_img_tienda($t['punto_interes']);
                                     	if(!$imagen){
 
@@ -37,23 +38,23 @@ Template name: Boulevard Tiendas
 
 
 										  	if(is_url_exist($imagen)){
-		                                    	$params1 	= array( 'width' => 650, 'height' => 650, 'crop' => true );	
+		                                    	$params1 	= array( 'width' => 650, 'height' => 650, 'crop' => true );
 											  	$imagen  	= bfi_thumb( $imagen, $params1 );
 										  	}else{
 	                                        	$imagen 	= "/assets/img/demobgtienda.jpg";
 											  	$imagen	 	= get_template_directory_uri().$imagen;
 										  	}
-										  	
+
                                     	}else{
 	                                    	$imagen 	= '/ws/uploads/img_'. $t['punto_interes'].'_1.jpg';
-	                                    	$params1 	= array( 'width' => 650, 'height' => 650, 'crop' => true );	
+	                                    	$params1 	= array( 'width' => 650, 'height' => 650, 'crop' => true );
 										  	$imagen	 	= get_template_directory_uri().$imagen;
 										  	$imagen  	= bfi_thumb( $imagen, $params1 );
                                     	}
-                                    	
+
                                     	$logo = '/ws/logos/'. quitatodo($t['nombre']).'.jpg';
                                     	$logo = get_template_directory_uri().$logo;
-                                    	
+
                                 		if(is_url_exist($logo)){
 	                                		$logo = $logo;
 									  	}else{
@@ -62,7 +63,7 @@ Template name: Boulevard Tiendas
 									  	}
 
                                 ?>
-					            <div class="col-sm-3 caja_tienda"> 
+					            <div class="col-sm-3 caja_tienda">
 					            	<div class="item_tienda" id="tienda_<?php echo $t['punto_interes']; ?>">
 					                	<div  class="tienda">
 					                    	<a class="btn_tienda" href="javascript:void(0);"  >
@@ -79,11 +80,11 @@ Template name: Boulevard Tiendas
 				                            </div> <!-- box logo tienda -->
 				                        </div> <!--  tienda -->
 				                    </div> <!-- item tienda -->
-					            </div> <!-- col sm 3 -->   
+					            </div> <!-- col sm 3 -->
 								<?php
 									}
-								}  		
-								?>                              
+								}
+								?>
                               </div>
                           </div> <!-- container grila tiendas -->
 	                        <div class="box_ver_mas_tiendas text-center">
@@ -93,15 +94,15 @@ Template name: Boulevard Tiendas
 	                                <span id="loader"  style="display:none"><i class="fa fa-circle-o-notch fa-spin fa-fw"></i></span>
 	                            </a>
 	                        </div> <!-- ver mas -->
-                                         
+
                       </div><!-- grid tiendas -->
-              
+
               </section> <!-- end tiendas -->
       </div>
 
 <?php // include('include-boulevard-otras-tiendas.php'); ?>
 <div id="pages" style="display:none;" data-pagina="food-court-tiendas">
-<?php 
+<?php
 	$postperpage = 12;
 	$rowcount = 0;
 
@@ -110,32 +111,32 @@ Template name: Boulevard Tiendas
 	$cola = "";
 
 	echo "Total Items: ".$rowcount;
-	
-	$paginas = ceil($rowcount/$postperpage); 
-	
+
+	$paginas = ceil($rowcount/$postperpage);
+
 	echo " - Páginas: ".$paginas;
-	
+
 	$x = 1;
 	while($x <= $paginas) {
 	?>
 		<a href="<?php bloginfo('url'); ?>/boulevard-tiendas?page=<?php echo  $x.$cola; ?>"></a>
-	<?php 
-		$x++; 
+	<?php
+		$x++;
 	}
 	?>
-	
+
 </div>
 <?php include('footer.php'); ?>
 <script>
 <?php if($paginas<=1){ ?>
 	$('.box_ver_mas_tiendas').hide();
-<?php } ?>	
-	
-	
+<?php } ?>
+
+
 var pages 	= new Array();
-var current = 0; 
+var current = 0;
 var loaded 	= new Array();
-	
+
 $('#pages a').each(function(index) {
     pages[index] = $(this).attr('href');
     loaded[$(this).attr('href')] = 0;
@@ -144,11 +145,11 @@ $('#pages a').each(function(index) {
 
 
 $('.box_ver_mas_tiendas').on('click', function(){
-  	loaded[pages[current+1]] = loaded[pages[current+1]] + 1; 
+  	loaded[pages[current+1]] = loaded[pages[current+1]] + 1;
     if(loaded[pages[current+1]] <= 1){
          loadMoreContent(current+1);
 	}
-}) 
+})
 
 function loadMoreContent(position) {
     if(position < pages.length) {
@@ -160,7 +161,7 @@ function loadMoreContent(position) {
 					$('#caja_tienda').append( $(pines).hide().fadeIn(2000));
 			        current=position;
 			        if(position +1 < pages.length) {
-					
+
 					}else{
 					 	$('.box_ver_mas_tiendas').hide();
 					}
