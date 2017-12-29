@@ -270,11 +270,11 @@ $('.box_slider').owlCarousel({
 		   		pinctodesc  = $(this).data('pinctodesc');
 
 		   		if(tienelogo=='si'){
-			   		$('.logo_tienda').removeClass('hide');
-			   		$('.nombretienda').addClass('hide');
+			   		$('.datos .logo_tienda').removeClass('hide');
+			   		$('.datos .nombretienda').addClass('hide');
 		   		}else{
-			   		$('.logo_tienda').addClass('hide');
-			   		$('.nombretienda').removeClass('hide');
+			   		$('.datos .logo_tienda').addClass('hide');
+			   		$('.datos .nombretienda').removeClass('hide');
 		   		}
 
 		   		result 	= url.replace(/(^\w+:|^)\/\//, '');

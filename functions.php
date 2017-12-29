@@ -71,7 +71,7 @@ function theme_js(){
 	wp_enqueue_script('datepicker-es', get_template_directory_uri() . '/assets/js/datepicker.es-ES.js', array('jquery'),'1', true);
 	wp_enqueue_script('bigtext-js', get_template_directory_uri() . '/assets/js/bigtext.js', array('jquery'),'1.7', true);
 	wp_enqueue_script('cookie-js', get_template_directory_uri() . '/assets/js/js.cookie.js', array('jquery'),'1.8.7', true);
-	wp_enqueue_script('pak-js', get_template_directory_uri() . '/assets/js/pak.js', array('jquery'),'1.8.9', true);
+	wp_enqueue_script('pak-js', get_template_directory_uri() . '/assets/js/pak.js', array('jquery'),'1.9.0', true);
 
 }
   add_action('wp_enqueue_scripts', 'theme_styles');
