@@ -16,25 +16,25 @@ $(document).ready(function() {
 
 
 
-            $(window).scroll(function() {
-                     if ($(this).scrollTop() < 480) {
-                        $(".search_home").addClass("fixed");
-                        $(".main_content").css("margin-top", "60px");
-                      } else {
-                        $(".search_home").removeClass("fixed");
-                         $(".main_content").css("margin-top", "0px");
-                      }
-              });
+$(window).scroll(function() {
+     if ($(this).scrollTop() < 480) {
+        $(".search_home").addClass("fixed");
+        $(".main_content").css("margin-top", "60px");
+      } else {
+        $(".search_home").removeClass("fixed");
+         $(".main_content").css("margin-top", "0px");
+      }
+});
 
-            $(window).scroll(function() {
-                     if ($(this).scrollTop() > 480) {
-                        $(".search_home").addClass("fixed");
-                         $(".main_content").css("margin-top", "70px");
-                      } else {
-                         $(".search_home").removeClass("fixed");
-                         $(".main_content").css("margin-top", "0px");
-                      }
-              });
+$(window).scroll(function() {
+	if ($(this).scrollTop() > 480) {
+		$(".search_home").addClass("fixed");
+		$(".main_content").css("margin-top", "70px");
+	} else {
+		$(".search_home").removeClass("fixed");
+		$(".main_content").css("margin-top", "0px");
+	}
+});
 // slider home
 
 $('#slider_piso_diseno').owlCarousel({
@@ -259,6 +259,7 @@ $('.box_slider').owlCarousel({
 		      window.location.href = urlpak+pagina+id_tienda;
 	   		}else{
 		   		logo 		= $(this).data('logo');
+		   		tienelogo	= $(this).data('tienelogo');
 		   		desc 		= $(this).data('desc');
 		   		img  		= $(this).data('img');
 		   		nombre  	= $(this).data('nombre');
@@ -267,6 +268,14 @@ $('.box_slider').owlCarousel({
 		   		url  		= $(this).data('url');
 		   		pindcto 	= $(this).data('pindcto');
 		   		pinctodesc  = $(this).data('pinctodesc');
+
+		   		if(tienelogo=='si'){
+			   		$('.logo_tienda').removeClass('hide');
+			   		$('.nombretienda').addClass('hide');
+		   		}else{
+			   		$('.logo_tienda').addClass('hide');
+			   		$('.nombretienda').removeClass('hide');
+		   		}
 
 		   		result 	= url.replace(/(^\w+:|^)\/\//, '');
 		   		if (result.charAt(result.length - 1) == '/') {
@@ -282,6 +291,7 @@ $('.box_slider').owlCarousel({
 		   		$("#caja_datos_tienda p.descripciontienda").html(desc);
 		   		$("#caja_datos_tienda .img_tienda").css({"background":"url("+img+")"});
 		   		$("#caja_datos_tienda .logo_tienda img").attr('src',logo);
+		   		$("#caja_datos_tienda .nombretienda").html(nombre);
 		   		if(fono){
 			   		$("#contactodatos").removeClass('hide');
 		   			$("#caja_datos_tienda .telefono").html(fono);
