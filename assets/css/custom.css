@@ -2404,4 +2404,18 @@ section.main_content section.travellers_servicios_adicionales .content_servicio 
 section.main_content section.travellers_servicios_adicionales .content_servicio .desc_servicio img{
 	margin-bottom: 10px;
 }
+#caja_datos_tienda .datos p.nombretienda {
+	font-family: 'superclarendonlight_italic', Helvetica, Arial, sans-serif !important;
+	font-size: 20px !important;
+	text-transform: uppercase !important;
+}
+
+
+
+
+
+
+
+
+
 
