@@ -28,14 +28,17 @@ if(isset($_GET['tiendaID'])){
 			  	$imagen  	= bfi_thumb( $imagen, $params1 );
         	}
         	
+        	              	
         	$logo = '/ws/logos/'. quitatodo($t['nombre']).'.jpg';
         	$logo = get_template_directory_uri().$logo;
         	
     		if(is_url_exist($logo)){
         		$logo = $logo;
+        		$haylogo = 'si';
 		  	}else{
-            	$logo 	= "/assets/img/logo_381.jpg?v=4";
+            	$logo 	= "/assets/img/logo_381.jpg?v=3";
 			  	$logo	= get_template_directory_uri().$logo;
+        		$haylogo = 'no';
 		  	}
         	
 			$desc 	= trim($t['descripcion']);
@@ -61,9 +64,15 @@ if(isset($_GET['tiendaID'])){
             	</div>
 				<div class="col-sm-6  col-sm-pull-6 nopad relative min-height">
                     <div class="datos">
-                        <div class="logo_tienda">
-                            <img src="<?php echo $logo; ?>" alt="" class="img-responsive">
-                        </div>
+	                
+						<?php if($haylogo=='si'){ ?>
+                    	<div class="logo_tienda">
+                        	<img src="<?php echo $logo; ?>" alt="" class="img-responsive">
+                    	</div> <!-- logo_tienda -->
+                    	<?php }else{ ?>
+                    	<p class="nombretienda"><?php echo $t['nombre']; ?></p>
+                    	<?php } ?>
+						
 						<p class="descripciontienda"><?php echo $desc; ?></p>
 						<?php 
 							if(!$fono){ 
